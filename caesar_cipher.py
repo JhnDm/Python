@@ -1,4 +1,4 @@
-# caesar_cipher.py
+
 
 def caesar_cipher_encrypt(message, shift):
     encrypted_message = ""
@@ -12,8 +12,7 @@ def caesar_cipher_encrypt(message, shift):
             encrypted_char = chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
             encrypted_message += encrypted_char
         else:
-            encrypted_message += char  # Keep non-alphabetic characters unchanged
-    
+            encrypted_message += char 
     return encrypted_message
 
 def caesar_cipher_decrypt(encrypted_message, shift):
@@ -28,17 +27,23 @@ def caesar_cipher_decrypt(encrypted_message, shift):
             decrypted_char = chr((ord(char) - ord('a') - shift) % 26 + ord('a'))
             decrypted_message += decrypted_char
         else:
-            decrypted_message += char  # Keep non-alphabetic characters unchanged
+            decrypted_message += char 
     
     return decrypted_message
 
-# Example usage when running the script directly
+
 if __name__ == "__main__":
-    plaintext = "Hello, World!"
-    shift_value = 3
+    plaintext = "Hello, I made it!"
+    shift_value = 4
 
     encrypted_text = caesar_cipher_encrypt(plaintext, shift_value)
     print("Encrypted message:", encrypted_text)
 
     decrypted_text = caesar_cipher_decrypt(encrypted_text, shift_value)
     print("Decrypted message:", decrypted_text)
+
+
+print("Name: Jhunalyn P. Domo")
+print("Section Code: IT36A")
+print("Course: IT64")
+print("Course Description: Information Assurance and Security")
